@@ -10,7 +10,7 @@ const NavLinks = [
 
 export default function Navbar() {
     return (
-        <div className='fixed flex flex-row top-0 left-0 w-full bg-blue-400 justify-around items-center'>
+        <div className='fixed flex flex-row top-0 left-0 w-full bg-blue-400 justify-around items-center z-50'>
             <Image
                 width={124}
                 height={124}
@@ -21,6 +21,7 @@ export default function Navbar() {
                 {NavLinks.map((link) => {
                     return (
                         <Link
+                            className='text-white'
                             key={link.label}
                             href={link.url}>
                             {link.label}
