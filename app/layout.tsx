@@ -33,7 +33,7 @@ export default function RootLayout({
         <html lang='en'>
             <body className={`${robotoSlab.className} antialiased flex flex-col `}>
                 <Navbar />
-                <main className='mt-40 mb-12'>{children}</main>
+                <main className=' mb-16'>{children}</main>
                 <Footer />
             </body>
         </html>
