@@ -27,8 +27,9 @@ export default function Home() {
     ];
     return (
         <div className='flex flex-col gap-8'>
-            <div className='flex flex-col h-fit bg-black/50'>
+            <div className='flex flex-col h-fit bg-black/50  w-full home-gallery'>
                 <ImageGallery
+                    additionalClass='home-gallery'
                     items={images}
                     showNav={false}
                     showThumbnails={false}

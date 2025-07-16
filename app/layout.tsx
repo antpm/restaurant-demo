@@ -1,18 +1,8 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono, Roboto_Slab } from 'next/font/google';
+import { Roboto_Slab } from 'next/font/google';
 import './globals.css';
 import Navbar from './components/navbar';
 import Footer from './components/footer';
-
-const geistSans = Geist({
-    variable: '--font-geist-sans',
-    subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-    variable: '--font-geist-mono',
-    subsets: ['latin'],
-});
 
 const robotoSlab = Roboto_Slab({
     variable: '--font-roboto-slab',
@@ -33,7 +23,7 @@ export default function RootLayout({
         <html lang='en'>
             <body className={`${robotoSlab.className} antialiased flex flex-col `}>
                 <Navbar />
-                <main className=' mb-16'>{children}</main>
+                <main className=' mb-32'>{children}</main>
                 <Footer />
             </body>
         </html>
