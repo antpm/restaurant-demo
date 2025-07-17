@@ -7,7 +7,7 @@ type Review = {
 
 export default function ReviewCard({ review }: { review: Review }) {
     return (
-        <div className='border-1 border-gray-300 rounded-lg w-96 text-xl p-8 relative'>
+        <div className='border-1 border-gray-300 rounded-lg md:w-96 w-11/12 text-xl p-8 relative'>
             <FaQuoteLeft className='w-10 h-10 absolute top-1 left-1 opacity-10' />
             <p>{review.body}</p>
             <p className='text-end'>-{review.name}</p>
