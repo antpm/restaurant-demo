@@ -28,7 +28,7 @@ export default function About() {
     ];
     return (
         <div className='flex flex-col w-full  items-center mt-16 gap-16'>
-            <div className='flex flex-row items-center justify-between gap-16 w-1/2 '>
+            <div className='flex md:flex-row flex-wrap items-center justify-between gap-16 w-1/2 '>
                 <p className={`${showDesc ? 'opacity-100' : 'opacity-0'} transition-all duration-1000 text-lg`}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget libero feugiat, euismod lacus in, volutpat tellus. Nulla ac
                     varius arcu, in laoreet enim. Vestibulum lorem erat, ullamcorper sit amet ullamcorper nec, iaculis sit amet magna. Vestibulum ante
