@@ -16,9 +16,12 @@ export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState<boolean>(false);
     return (
         <>
-            <div className={`${menuOpen ? 'top-20' : '-top-20'} left-0 fixed transition-all duration-500 bg-blue-500 flex flex-col z-40 w-full `}>
+            <div
+                className={`${
+                    menuOpen ? 'top-20' : '-top-20'
+                } left-0 fixed transition-all duration-500 bg-blue-500 flex flex-col z-40 w-full rounded-b-lg`}>
                 <Link
-                    className='text-white w-full text-center text-2xl h-12 flex items-center justify-center border-b-2 '
+                    className='text-white w-full text-center text-2xl h-12 flex items-center justify-center border-b-2 border-white/50 '
                     href={NavLinks[0].url}
                     onNavigate={() => {
                         setMenuOpen(false);
@@ -34,7 +37,7 @@ export default function Navbar() {
                     {NavLinks[1].label}
                 </Link>
                 <Link
-                    className='text-white w-full text-center text-2xl h-12 flex items-center justify-center border-t-2 '
+                    className='text-white w-full text-center text-2xl h-12 flex items-center justify-center border-t-2 border-white/50 '
                     href={NavLinks[2].url}
                     onNavigate={() => {
                         setMenuOpen(false);

@@ -31,3 +31,8 @@ body {
         height: 400;
     }
 }
+
+.home-logo {
+    background-image: url('/home-gallery/gallery-3.jpg');
+    background-position: center;
+}

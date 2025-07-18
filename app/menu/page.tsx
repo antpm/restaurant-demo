@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import { Ref, RefObject, useEffect, useRef, useState } from 'react';
+import { RefObject, useEffect, useRef, useState } from 'react';
 
 const mains = [
     {
@@ -144,7 +144,7 @@ export default function Menu() {
             <div
                 className={`${
                     showNav ? 'opacity-100' : 'opacity-0'
-                } transition-all duration-1000 sticky md:top-34 top-24 bg-blue-400 p-4 rounded-lg border-1 border-blue-300 flex flex-row gap-10 text-xl text-white`}>
+                } transition-all duration-1000 sticky md:top-34 top-24 bg-blue-400 p-4 rounded-lg border-1 border-blue-300 flex flex-row gap-10 text-xl text-white shadow-sm shadow-black/50`}>
                 <button
                     className='cursor-pointer'
                     onClick={() => {
