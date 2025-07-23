@@ -5,6 +5,7 @@ import Logo from '@/public/logo.png';
 import Link from 'next/link';
 import { FaBars } from 'react-icons/fa6';
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 const NavLinks = [
     { label: 'Home', url: '/' },
@@ -14,6 +15,7 @@ const NavLinks = [
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState<boolean>(false);
+    const pathname = usePathname();
     return (
         <>
             <div
@@ -22,27 +24,27 @@ export default function Navbar() {
                 } left-0 fixed transition-all duration-500 bg-blue-500 flex flex-col z-40 w-full rounded-b-lg`}>
                 <Link
                     className='text-white w-full text-center text-2xl h-12 flex items-center justify-center border-b-2 border-white/50 '
-                    href={NavLinks[0].url}
+                    href={'/'}
                     onNavigate={() => {
                         setMenuOpen(false);
                     }}>
-                    {NavLinks[0].label}
+                    <p className={`${pathname === '/' && 'text-blue-200 scale-125'} `}>Home</p>
                 </Link>
                 <Link
                     className='text-white w-full text-center text-2xl h-12 flex items-center justify-center  rounded-lg'
-                    href={NavLinks[1].url}
+                    href={'/menu'}
                     onNavigate={() => {
                         setMenuOpen(false);
                     }}>
-                    {NavLinks[1].label}
+                    <p className={`${pathname === '/menu' && 'text-blue-200 scale-125'} `}>Menu</p>
                 </Link>
                 <Link
                     className='text-white w-full text-center text-2xl h-12 flex items-center justify-center border-t-2 border-white/50 '
-                    href={NavLinks[2].url}
+                    href={'/about'}
                     onNavigate={() => {
                         setMenuOpen(false);
                     }}>
-                    {NavLinks[2].label}
+                    <p className={`${pathname === '/about' && 'text-blue-200 scale-125'} `}>About</p>
                 </Link>
             </div>
             <div className='sticky flex flex-row top-0 left-0 w-full bg-blue-400 md:justify-around justify-between items-center z-50 border-b-2  border-blue-300 p-2'>
@@ -53,14 +55,14 @@ export default function Navbar() {
                     src={Logo}
                     alt='Logo'
                 />
-                <div className={`md:flex hidden flex-row gap-4 text-3xl p-8`}>
+                <div className={`md:flex hidden flex-row gap-8 text-3xl p-8`}>
                     {NavLinks.map((link) => {
                         return (
                             <Link
                                 className='text-white'
                                 key={link.label}
                                 href={link.url}>
-                                {link.label}
+                                <p className={`${pathname === link.url && 'text-blue-200 scale-125'} transition-all duration-300`}>{link.label}</p>
                             </Link>
                         );
                     })}

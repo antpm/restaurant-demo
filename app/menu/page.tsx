@@ -173,7 +173,7 @@ export default function Menu() {
                     className='text-3xl scroll-m-52'>
                     Mains
                 </p>
-                <div className='flex flex-row gap-48 justify-evenly items-center w-2/3 flex-wrap'>
+                <div className='flex flex-row md:gap-48 gap-16 justify-evenly items-center w-2/3 flex-wrap'>
                     {mains.map((main, i) => {
                         return (
                             <div
@@ -198,7 +198,7 @@ export default function Menu() {
                     className='text-3xl scroll-m-52'>
                     Sides
                 </p>
-                <div className='flex flex-row gap-48 justify-evenly items-center w-2/3 flex-wrap'>
+                <div className='flex flex-row md:gap-48 gap-16  justify-evenly items-center w-2/3 flex-wrap'>
                     {sides.map((side, i) => {
                         return (
                             <div
@@ -223,7 +223,7 @@ export default function Menu() {
                     className='text-3xl scroll-m-52'>
                     Drinks
                 </p>
-                <div className='flex flex-row gap-48 justify-evenly items-center w-2/3 flex-wrap'>
+                <div className='flex flex-row md:gap-48 gap-16  justify-evenly items-center w-2/3 flex-wrap'>
                     {drinks.map((drink, i) => {
                         return (
                             <div
